@@ -1,38 +1,174 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background-color: #050514;
+    background-image: linear-gradient(551deg, #6dafb6 0%, #126734 70%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    min-height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input {
+    background-color: #26752a;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(0, 0, 0, 0.1);
+    color: white;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    width: 400px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+input::placeholder {
+    color: #ffffff;
 }
 
-.App-link {
-  color: #61dafb;
+input:focus {
+    outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card {
+    /* background-color: #16595f; 
+    background-image: linear-gradient(550deg, #89cbd9 0%, #177c75 50%); */
+    border-radius: 20px;
+    box-shadow: 0 25px 40px rgba(219, 211, 138, 0.05), 0 25px 140px rgba(254, 254, 254, 0.1);
+    display: flex;
+    flex-direction: row;
+    padding: 3rem;
+    max-width: 800px;
+    justify-content: center; 
+    align-items: center;
+}
+
+
+
+.avatar {
+    border: 10px solid #2a7241;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    align-items: center;
+    transition: box-shadow 0.5s ease; /* Add a smooth transition effect */
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.8);
+}
+
+.avatar:hover {
+    box-shadow: 0 0 50px rgba(108, 182, 209, 0.8); /* White neon shadow on hover */
+}
+
+.date-avatar p{
+    font-size: 2rem;
+    font-weight: 900;
+    color: white;
+    margin-top: 15%;
+    /* font-family: 'Courier New', monospace;  */
+    font-family: "Madimi One", sans-serif;
+}
+.user-info {
+    color: #eee;
+    margin-left: 2rem;
+    
+
+}
+
+.user-info h2 {
+    margin-bottom: 5%;
+    /* font-family: 'Courier New', monospace; */
+    font-family: "Pacifico", cursive;
+    font-size: 3rem;
+    align-items: center;
+    justify-content: center; 
+    margin-left: rem;
+}
+
+.user-info p {
+    font-family: "Madimi One", sans-serif;
+    font-weight: 00;
+}
+
+.user-info ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 10px;
+    max-width: 400px;
+}
+
+.user-info ul li {
+    display: flex;
+    margin-right: 10px;
+    align-items: center;
+}
+
+.user-info ul li strong {
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+}
+
+.repo {
+    background-color: #154d22;
+    border-radius: 10px;
+    display: inline-block;
+    color: white;
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+    transition: box-shadow 0.5s ; 
+
+}
+
+.repo:hover {
+    box-shadow: 0 0 15px #78e491; 
+}
+
+
+@media screen and (max-width: 420px) {
+    .card {
+        width: 450px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .avatar {
+        margin-bottom: 1rem;
+    }
+
+    .date-avatar {
+        align-items: center;
+    }
+
+    .date-avatar p {
+        margin-top: 5%; /* Adjust the margin as needed */
+        font-size: 1.5rem; /* Adjust the font size as needed */
+    }
+
+    .user-info {
+        text-align: center;
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+
+    .user-info h2 {
+        font-size: 2rem; /* Adjust the font size as needed */
+        margin-bottom: 0.5rem;
+    }
+
+    .user-info p {
+        font-size: 1rem; /* Adjust the font size as needed */
+    }
 }
